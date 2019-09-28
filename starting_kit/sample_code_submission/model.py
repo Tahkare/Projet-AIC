@@ -9,9 +9,9 @@ You must supply at least 4 methods:
 import pickle
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
-from sklearn.base import BaseEstimator
+from sklearn.tree import DecisionTreeClassifier
 
-class model (BaseEstimator):
+class model (DecisionTreeClassifier):
     def __init__(self):
         '''
         This constructor is supposed to initialize data members.
