@@ -1,8 +1,12 @@
-This is a sample starting kit for the Iris challenge. 
-It uses the well known Iris dataset from Fisher's classic paper (Fisher, 1936). The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.
+This is a sample starting kit for the Plankton challenge. 
+
+According to [NRMA15], a link has been found between the quality of water and the presence of plankton in said water. As water quality increases, the abundance and diversity of plankton does as well. The aim of our project is to build a plankton classifier to assess water quality.
+
+We use for this problem the Bering Sea dataset, an in situ plankton dataset published in May 2019 by Kaichang Cheng [Che19]. This datset contains 7 classes with an even spread.
 
 References and credits: 
-R. A. Fisher. The use of multiple measurements in taxonomic problems. Annual Eugenics, 7, Part II, 179-188 (1936). 
+- [NRMA15] A. Nair, J.K. Reshma, A. Mathew, and A. Ashok. Effect of water quality on phytoplankton abundance in selected ponds of nedumangad block panchayat, kerala. Emer Life Sci Res, 2015.
+- [Che19] K. Cheng. Bering sea dataset. https://doi.org/10.6084/m9.figshare.8146283.v3, 2019.
 
 Prerequisites:
 Install Anaconda Python 3.6.6 
@@ -13,7 +17,7 @@ Usage:
 
 - The three files sample_*_submission.zip are sample submissions ready to go!
 
-- The file README.ipynb contains step-by-step instructions on how to create a sample submission for the Iris challenge. 
+- The file README.ipynb contains step-by-step instructions on how to create a sample submission for the Plankton challenge. 
 At the prompt type:
 jupyter-notebook README.ipynb
 
