@@ -9,14 +9,18 @@ You must supply at least 4 methods:
 import pickle
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.base import BaseEstimator
 
-class model (DecisionTreeClassifier):
-    def __init__(self):
+class model (BaseEstimator):
+    def __init__(self,classifier=None):
         '''
         This constructor is supposed to initialize data members.
         Use triple quotes for function documentation. 
         '''
+        
+        # Customized classifier among decision tree, KNN, ...
+        self.classifier = classifier
+        
         self.num_train_samples=0
         self.num_feat=1
         self.num_labels=1
@@ -44,6 +48,10 @@ class model (DecisionTreeClassifier):
         print("FIT: dim(y)= [{:d}, {:d}]".format(num_train_samples, self.num_labels))
         if (self.num_train_samples != num_train_samples):
             print("ARRGH: number of samples in X and y do not match!")
+            
+        if self.classifier is not None:
+            self.classifier.fit(X,y)
+            
         self.is_trained=True
 
     def predict(self, X):
@@ -67,10 +75,16 @@ class model (DecisionTreeClassifier):
         y = np.zeros([num_test_samples, self.num_labels])
         # If you uncomment the next line, you get pretty good results for the Iris data :-)
         #y = np.round(X[:,3])
+        
+        if self.classifier is not None:
+            y = self.classifier.predict(X)
+        
         return y
 
     def save(self, path="./"):
-        pickle.dump(self, open(path + '_model.pickle', "wb"))
+        file = open(path + '_model.pickle', "wb")
+        pickle.dump(self, file)
+        file.close()
 
     def load(self, path="./"):
         modelfile = path + '_model.pickle'
@@ -78,4 +92,5 @@ class model (DecisionTreeClassifier):
             with open(modelfile, 'rb') as f:
                 self = pickle.load(f)
             print("Model reloaded from: " + modelfile)
+        
         return self
