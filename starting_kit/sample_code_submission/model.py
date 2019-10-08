@@ -10,9 +10,10 @@ import pickle
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
 from sklearn.base import BaseEstimator
+from sklearn.dummy import DummyClassifier
 
 class model (BaseEstimator):
-    def __init__(self,classifier=None):
+    def __init__(self,classifier=DummyClassifier()):
         '''
         This constructor is supposed to initialize data members.
         Use triple quotes for function documentation. 
