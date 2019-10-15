@@ -17,9 +17,12 @@ Usage:
 
 - The three files sample_*_submission.zip are sample submissions ready to go!
 
-- The file README.ipynb contains step-by-step instructions on how to create a sample submission for the Plankton challenge. 
+- The file README.ipynb contains step-by-step instructions on how to create a sample submission for the Plankton challenge. It is in same folder as the README.md.
+
 At the prompt type:
 jupyter-notebook README.ipynb
+
+Then you can run the notebook cell by cell.
 
 - modify sample_code_submission to provide a better model
 

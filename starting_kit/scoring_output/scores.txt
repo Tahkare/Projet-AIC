@@ -1,4 +1,4 @@
-set1_score: 0.664285714286
-set2_score: 0.677857142857
-set3_score: 0.645714285714
+set1_score: 0.427142857143
+set2_score: 0.818571428571
+set3_score: 0.420000000000
 Duration: 0
