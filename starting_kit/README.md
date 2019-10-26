@@ -10,21 +10,24 @@ References and credits:
 
 Prerequisites:
 Install Anaconda Python 3.6.6 
+You may create a conda environment, with is named python3 to match the '!source activate python3' commands in the notebook.
 
 Usage:
 
 (1) If you are a challenge participant:
+
+- The images directory contains some examples of raw data.
 
 - The three files sample_*_submission.zip are sample submissions ready to go!
 
 - The file README.ipynb contains step-by-step instructions on how to create a sample submission for the Plankton challenge. It is in same folder as the README.md.
 
 At the prompt type:
-jupyter-notebook README.ipynb
+jupyter notebook README.ipynb
 
 Then you can run the notebook cell by cell.
 
-- modify sample_code_submission to provide a better model
+- modify sample_code_submission/model.py to provide a better model
 
 - zip the contents of sample_code_submission (without the directory, but with metadata), or
 
