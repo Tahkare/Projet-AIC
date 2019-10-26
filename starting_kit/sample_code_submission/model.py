@@ -10,10 +10,10 @@ import pickle
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
 from sklearn.base import BaseEstimator
-from sklearn.dummy import DummyClassifier
+from sklearn.tree import DecisionTreeClassifier
 
 class model (BaseEstimator):
-    def __init__(self,classifier=DummyClassifier()):
+    def __init__(self,classifier=DecisionTreeClassifier(max_depth=10, max_features = 'sqrt',random_state=42)):
         '''
         This constructor is supposed to initialize data members.
         Use triple quotes for function documentation. 
