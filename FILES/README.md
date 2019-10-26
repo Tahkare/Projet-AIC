@@ -1,16 +1,8 @@
-This directory contains various files that help you build the Iris challenge. 
+This directory contains the directory 'full_data' which contains all the pre-processed data for the Plankton challenge : train set, valid set, test set and their ground truth.
+
 This is for use with Codalab and Chalab.
 
-Isabelle Guyon -- November 2018
-
-Credits:
-This uses the well known Iris dataset from Fisher's classic paper (Fisher, 1936). 
-The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. 
-One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.
+Team GAIASAVERS -- 2019-2020
 
 References and credits: 
-R. A. Fisher. The use of multiple measurements in taxonomic problems. Annual Eugenics, 7, Part II, 179-188 (1936). 
-
-Prerequisites:
-Install Anaconda Python 3.6.6 
-
+K. Cheng. Bering sea dataset. https://doi.org/10.6084/m9.figshare.8146283.v3, 2019.
